@@ -17,7 +17,7 @@ public class TaskServiceImpl extends UnicastRemoteObject implements TaskServiceI
     @Override
     public synchronized void addTask(String tache) throws RemoteException {
         taches.add(tache);
-        System.out.println("tâche ajoutée : " + tache);
+        System.out.println("tache ajoutee : " + tache);
     }
 
     @Override
