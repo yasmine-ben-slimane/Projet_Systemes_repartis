@@ -18,8 +18,8 @@ public class TaskClient {
             boolean exit = false;
             while (!exit) {
                 System.out.println("-----------------------------");
-                System.out.println("Choisissez une opération :");
-                System.out.println("1. Recupérer la liste des taches");
+                System.out.println("Choisissez une operation :");
+                System.out.println("1. Recuperer la liste des taches");
                 System.out.println("2. Ajouter une nouvelle tache");
                 System.out.println("3. Supprimer une tache existante");
                 System.out.println("4. Quitter");
