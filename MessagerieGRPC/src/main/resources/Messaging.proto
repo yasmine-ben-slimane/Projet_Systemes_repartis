@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.miniprojet.messaging";
+option java_outer_classname = "MessagingProto";
+
+service MessagingService {
+    rpc sendMessage(MessageRequest) returns (MessageResponse);
+    rpc retrieveMessagesForUser(UserRequest) returns (MessagesResponse);
+}
+
+message MessageRequest {
+    string sender_id = 1;
+    string receiver_id = 2;
+    string message_text = 3;
+}
+
+message UserRequest {
+    string user_id = 1;
+}
+
+message MessageResponse {
+    string message_id = 1;
+}
+
+message Message {
+    string message_id = 1;
+    string sender_id = 2;
+    string receiver_id = 3;
+    string message_text = 4;
+}
+
+message MessagesResponse {
+    repeated Message messages = 1;
+}
